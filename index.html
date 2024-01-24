@@ -3,42 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Headlines - By Arafat</title>
-    <link rel="stylesheet" href="css/LineIcons.css">
-    <link rel="stylesheet" href="css/jquery.animatedheadline.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Responsive Web Page with Download Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .download-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .download-button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section id="hero">
-        <div class="v-middle">
-        <div id="particles-js"></div>
-            <div class="container">
-                <div class="hero-text-box">
-                    <h5>Hello</h5>
-                    <h1 class="ah-headline">
-                        <span>i am</span>
-                        <span class="ah-words-wrapper">
-                        <b class="is-visible">arafat ahmed</b>
-                        <b>entrepreneur</b>
-                        <b>web developer</b>
-                        <b>web designer</b>
-                        </span>
-                    </h1>
-                    <div class="social-icon">
-                        <ul>
-                            <li><a href="https://www.facebook.com/arafatthemaster/"><i class="lni lni-facebook-filled"></i></a></li>
-                            <li><a href="projects/OpenAI/"  target="_blank"><i class="lni lni-youtube"></i></a></li>
-                            <li><a href="#"><i class="lni lni-envelope"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>   
+
+    <div class="container">
+        <h1>Responsive Web Page</h1>
+        <p>We think you'll love this responsive web page on all your devices. Download it now!</p>
+        
+        <div class="download-section">
+            <h2>Downloadable Content 1</h2>
+            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
+            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
         </div>
-    </section>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery.animatedheadline.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/script.js"></script>
+
+        <div class="download-section">
+            <h2>Downloadable Content 2</h2>
+            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
+            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
+        </div>
+
+        <div class="download-section">
+            <h2>Downloadable Content 3</h2>
+            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
+            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
+        </div>
+
+        <div class="download-section">
+            <h2>Downloadable Content 4</h2>
+            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
+            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
+        </div>
+
+        <div class="download-section">
+            <h2>Downloadable Content 5</h2>
+            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
+            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
+        </div>
+    </div>
+
+    <script>
+        function downloadPage() {
+            // You can add logic here to trigger the download
+            alert('Download functionality to be implemented.');
+        }
+    </script>
+
 </body>
 </html>
