@@ -1,125 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Page with Download Buttons</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        }
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
 
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
+    label, input, textarea {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
 
-        p {
-            color: #555;
-            margin-bottom: 20px;
-        }
+    label {
+      width: 35%; /* Adjust the width as needed */
+    }
 
-        .download-section {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+    input, textarea {
+      width: 40%; /* Adjust the width as needed */
+      box-sizing: border-box;
+    }
 
-        .download-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007BFF;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
+    .copy-button {
+      width: 10%;
+      margin-left: 5px;
+      box-sizing: border-box;
+    }
 
-        @media (max-width: 600px) {
-            .download-button {
-                font-size: 14px;
-            }
-        }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      width: 100%; /* Make the submit button full-width */
+    }
 
-        .center-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-    </style>
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+  </style>
+  <script>
+    function copyText(inputId) {
+      var inputField = document.getElementById(inputId);
+      inputField.select(); // Select the text
+      navigator.clipboard.writeText(inputField.value) // Write the selected text to the clipboard
+        .then(() => {
+          console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+          console.error('Unable to copy text', err);
+        });
+    }
+  </script>
 </head>
 <body>
 
-    <div class="container center-content">
-        <h1>Responsive Web Page</h1>
-        <p>We think you'll love this responsive web page on all your devices. Download it now!</p>
-    </div>
+  <form action="#" method="post">
+    <h2>CV Form</h2>
 
-    <div class="container">
-        <div class="download-section">
-            <h2>Downloadable Content 1</h2>
-            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
-            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
-        </div>
+    <!-- Personal Information -->
+    <label for="NameEng">Applicant's Name:</label>
+    <input type="text" id="NameEng" name="NameEng" required value="MD. ARAFAT">
+    <button type="button" class="copy-button" onclick="copyText('NameEng')">Copy</button>
+    
+    <label for="NameBngla">আবেদনকারীর নাম (বাংলায়):</label>
+    <input type="text" id="NameBngla" name="NameBngla" required value="মোঃ আরাফাত">
+    <button type="button" class="copy-button" onclick="copyText('NameBngla')">Copy</button>
+    
+    <label for="fatherName">Father's Name</label>
+    <input type="text" id="fatherName" name="fatherName" required value="MD. MAHABUB RAHMAN">
+    <button type="button" class="copy-button" onclick="copyText('fatherName')">Copy</button>
+    
+    <label for="fatherNameB">পিতার নাম (বাংলায়):</label>
+    <input type="text" id="fatherNameB" name="fatherNameB" required value="মোঃ মাহাবুব রহমান">
+    <button type="button" class="copy-button" onclick="copyText('fatherNameB')">Copy</button>
+    
+    <label for="motherName">Mother's Name</label>
+    <input type="text" id="motherName" name="motherName" required value="MOST. RABEYA BOSORI">
+    <button type="button" class="copy-button" onclick="copyText('motherName')">Copy</button>
+    
+    <label for="motherNameB">মাতার নাম (বাংলায়):</label>
+    <input type="text" id="motherNameB" name="motherNameB" required value="মোছাঃ রাবেয়া বসরী">
+    <button type="button" class="copy-button" onclick="copyText('motherNameB')">Copy</button>
+    
+    <label for="BirthDay">Date of Birth</label>
+    <input type="text" id="BirthDay" name="BirthDay" required value="05 JUNE 2000">
+    <button type="button" class="copy-button" onclick="copyText('BirthDay')">Copy</button>
+        
+    <label for="Nationality">Nationality</label>
+    <input type="text" id="Nationality" name="Nationality" required value="Bangladeshi">
+    <button type="button" class="copy-button" onclick="copyText('Nationality')">Copy</button>
+    
+    <label for="Religion">Religion</label>
+    <input type="text" id="Religion" name="Religion" required value="Islam">
+    <button type="button" class="copy-button" onclick="copyText('Religion')">Copy</button>
+    
+    <label for="Gender">Gender</label>
+    <input type="text" id="Gender" name="Gender" required value="Male">
+    <button type="button" class="copy-button" onclick="copyText('Gender')">Copy</button>
+    
+    <label for="NationalID">National ID</label>
+    <input type="text" id="NationalID" name="NationalID" required value="5560900150">
+    <button type="button" class="copy-button" onclick="copyText('NationalID')">Copy</button>
+    
+    <label for="birthReg">Birth Registration</label>
+    <input type="text" id="birthReg" name="birthReg" required value="20007727305001774">
+    <button type="button" class="copy-button" onclick="copyText('birthReg')">Copy</button>
+    
+    <label for="PassportID">Passport ID</label>
+    <input type="text" id="PassportID" name="PassportID" required value="NA">
+    <button type="button" class="copy-button" onclick="copyText('PassportID')">Copy</button>
+    
+    <label for="maritalStatus">Marital Status</label>
+    <input type="text" id="maritalStatus" name="maritalStatus" required value="Single">
+    <button type="button" class="copy-button" onclick="copyText('maritalStatus')">Copy</button>
+    
+    <label for="PHNOE">Mobile Number</label>
+    <input type="text" id="PHNOE" name="PHNOE" required value="01516010811">
+    <button type="button" class="copy-button" onclick="copyText('PHNOE')">Copy</button>
+    
+    <label for="EmailName">Email</label>
+    <input type="text" id="EmailName" name="EmailName" required value="arafat.official222@gmail.com">
+    <button type="button" class="copy-button" onclick="copyText('EmailName')">Copy</button>
 
-<div class="download-section">
-            <h2>Downloadable Content 1</h2>
-            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
-            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
-        </div>
+    <!-- Present Address  -->
+    <h3>Present Address</h3>
+    
+    <label for="CareOf">Care Of</label>
+    <input type="text" id="CareOf" name="CareOf" required value="Father">
+    <button type="button" class="copy-button" onclick="copyText('CareOf')">Copy</button>
+  
 
-<div class="download-section">
-            <h2>Downloadable Content 1</h2>
-            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
-            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
-        </div>
+    <label for="Vill">Village/ Road/ House/ Flat</label>
+    <input type="text" id="Vill" name="Vill" required value="Kamat Para">
+    <button type="button" class="copy-button" onclick="copyText('Vill')">Copy</button>
+     
+     
+    <label for="District">District</label>
+    <input type="text" id="District" name="District" required value="Panchagarh">
+    <button type="button" class="copy-button" onclick="copyText('District')">Copy</button>
+      
+      
+    <label for="Upazila">Upazila/P.S.</label>
+    <input type="text" id="Upazila" name="Upazila" required value="Panchagarh Sadar">
+    <button type="button" class="copy-button" onclick="copyText('Upazila')">Copy</button>
+      
+      
+    <label for="postOffice">Post Office</label>
+    <input type="text" id="postOffice" name="postOffice" required value="Panchagarh">
+    <button type="button" class="copy-button" onclick="copyText('postOffice')">Copy</button>
+      
+      
+    <label for="PostCode">Post Code</label>
+    <input type="text" id="PostCode" name="PostCode" required value="5000">
+    <button type="button" class="copy-button" onclick="copyText('PostCode')">Copy</button> 
+      
+    <label for="AddressEng">Address:</label>
+    <input type="text" id="AddressEng" name="AddressEng" required value="Village/Street: Kamatpara, Post Office: Panchagarh-5000, Panchagarh Sadar, Panchagarh Municipality, Panchagarh">
+    <button type="button" class="copy-button" onclick="copyText('AddressEng')">Copy</button> 
+      
+    <label for="AddressBng">ঠিকানাঃ</label>
+    <input type="text" id="AddressBng" name="AddressBng" required value="গ্রাম/রাস্তাঃ কামাতপাড়া, ডাকঘড়ঃ পঞ্চগড়-৫০০০, পঞ্চগড় সদর, পঞ্চগড় পৌরসভা, পঞ্চগড়">
+    <button type="button" class="copy-button" onclick="copyText('AddressBng')">Copy</button> 
+      
 
-<div class="download-section">
-            <h2>Downloadable Content 1</h2>
-            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
-            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
-        </div>
+      
+      
+      
+      
+      
+   
+    <!-- Education -->
+    <h3>Education</h3>
+   
+    <label for="eduDegree1">Degree:</label>
+    <input type="text" id="eduDegree1" name="eduDegree1" placeholder="e.g., Bachelor of Science" required value="Bachelor of Social Science">
 
-<div class="download-section">
-            <h2>Downloadable Content 1</h2>
-            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
-            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
-        </div>
+    <label for="eduSchool1">School/University:</label>
+    <input type="text" id="eduSchool1" name="eduSchool1" required value="National University">
 
-<div class="download-section">
-            <h2>Downloadable Content 1</h2>
-            <p>This file includes a responsive web page that adapts to various screen sizes. Enjoy the flexibility of accessing your content on different devices.</p>
-            <a href="#" class="download-button" onclick="downloadPage()">Download Now</a>
-        </div>
+    <label for="eduYear1">Year of Graduation:</label>
+    <input type="text" id="eduYear1" name="eduYear1" placeholder="YYYY" required>
+   
+   
+    <!-- Work Experience -->
+    <h3>Work Experience</h3>
 
-        <!-- Repeat the download sections as needed -->
+   
+    <!-- Skills -->
+    <h3>Skills</h3>
+    
+    
+    <!-- Additional Information -->
+    <h3>Additional Information</h3>
+   
+   
+   
+   
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <button type="button" class="copy-button" onclick="copyText('address')">Copy</button>
 
-    </div>
 
-    <script>
-        function downloadPage() {
-            // You can add logic here to trigger the download
-            alert('Download functionality to be implemented.');
-        }
-    </script>
+
+    <label for="eduDegree1">Degree:</label>
+    <input type="text" id="eduDegree1" name="eduDegree1" placeholder="e.g., Bachelor of Science" required>
+    <button type="button" class="copy-button" onclick="copyText('eduDegree1')">Copy</button>
+
+    <!-- Add copy buttons for other fields as needed -->
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+  </form>
 
 </body>
 </html>
