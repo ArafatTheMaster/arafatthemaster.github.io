@@ -1,4 +1,3 @@
 ### Hi there 👋
 
-<!--
-**https://arafatthemaster.github.io/**
+https://arafatthemaster.github.io/
