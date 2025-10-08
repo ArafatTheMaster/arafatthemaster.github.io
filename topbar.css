@@ -1,0 +1,81 @@
+body {
+    overflow-x: hidden;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.unique-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    background: #191616;
+}
+
+.unique-top-bar span {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.unique-top-bar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.unique-top-bar li {
+    margin: 0px 5px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unique-top-bar a {
+    color: #181818;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.unique-fb:hover {
+    color: #3b5998;
+    background-color: #f1c40f;
+}
+
+.unique-yt:hover {
+    color: #ff3333;
+    background-color: #f1c40f;
+}
+
+.unique-fg:hover {
+    color: #3b5998;
+    background-color: #f1c40f;
+}
+
+.unique-cl:hover {
+    color: #2f2621;
+    background-color: #f1c40f;
+}
+
+.unique-logout {
+    padding: 10px;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: #222222; 
+
+}
+
+.unique-logout:hover {
+    color: #f1c40f;
+    border: 2px solid #f1c40f;
+    background-color: #222222; 
+}
+.fa-crown, .y {
+    color: #f1c40f;
+}
