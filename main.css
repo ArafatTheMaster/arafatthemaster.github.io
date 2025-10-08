@@ -1,0 +1,102 @@
+.one {
+    color: #FFFFFF;
+    background-color: #6f56ec;
+    font-family: Arial, sans-serif;
+}
+        
+.two {
+    color: #FFFFFF;
+    background-color: #f66213;
+}
+        
+.three {
+    color: #FFFFFF;
+    background-color: #d61c4e;
+}
+        
+.four {
+    color: #FFFFFF;
+    background-color: #1c67ca;
+}
+        
+.five {
+    color: #FFFFFF;
+    background-color: #247881;
+}
+
+h3 {
+    color: ;
+    border: 4px solid #fff;
+    padding: 12px;
+    border-radius: 50px;
+    width: 315px;
+    height: auto;
+    margin: 8px;
+    font-size: 17px;
+    color: #fff;
+    background: #66b347;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+        
+div {
+    padding: 2px;      
+}
+        
+.button {
+    color: white;
+    background-color: #192a56;
+    border: none;
+    padding: 10px 10px;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: 5px solid rgba(7, 23, 65, 0.72);
+    width: 330px;
+    height: 22px;
+	border-radius: 25px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: snow;
+    color: #F44336;
+    border-bottom: 5px solid #F44336;
+    width: 330px;
+    height: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+.clipboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1px;
+}
+.copy-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.column {
+    flex: 1;
+}
