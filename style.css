@@ -111,7 +111,7 @@ h2 {
     text-decoration: underline;
 }
 
-button {
+.submit {
     width: 100%;
     height: 40px;
     background: #fff;
