@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Animated Login Form using HTML CSS Only | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #ffffff;
+        transition: background-color 5000s ease-in-out 0s;
+        box-shadow: inset 0 0 20px 20px #23232329;
+    }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9"></script>
+
+	<script>
+		function togglePasswordVisibility() {
+			var passwordInput = document.getElementById("password");
+			var checkbox = document.getElementById("showPasswordCheckbox");
+
+
+			if (checkbox.checked) {
+				passwordInput.type = "text";
+			} else {
+				passwordInput.type = "password";
+			}
+		}
+	</script>
+
+
+</head>
+
+<body>
+    
+    <section>
+        <div class="login-box">
+            <form action="another-page/index.html" method="POST" onsubmit="validateForm(event)">
+                <h2>Registration</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-add-outline"></ion-icon>
+                    </span>
+                    <input type="text" id="name" name="name" required>
+                    <label>Name</label>
+                </div>
+                
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="text" id="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="at-outline"></ion-icon>
+                    </span>
+                    <input type="text" id="username" name="username" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" id="password" name="password" required>
+                    <label>Create Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" id="showPasswordCheckbox" onchange="togglePasswordVisibility()">
+                        Show Password
+                    </label>
+
+                    <a href="forgot-password/index.html" target="_blank">Terms & Conditions</a>
+
+                </div>
+
+                <button type="submit"><b>Register</b></button>
+
+                <div class="register-link">
+                    <p>Already have an account?
+                        <a href="../../Login-Form/index.html" target="_blank">Login Now</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
