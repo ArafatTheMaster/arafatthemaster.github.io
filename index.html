@@ -974,7 +974,13 @@
             <div class="column">
                 <div class="clipboard-container">
              <h3 class="five">Enatertaiment</h3>
-					    <div><a class="button" href="https://moviebox.ph/" target="_blank">MovieBox : Watch Online</a></div>
+						<div>
+    						<a href="#" class="button" onclick="openMovieBox(); return false;">
+        					MovieBox : Watch Online
+    						</a>
+						</div>
+
+					
 					    <div><a class="button" href="https://ww11.soap2dayhd.co/" target="_blank">Soap2day : Watch Online</a></div>
                         <div><a class="button" href="https://freefunz.site/" target="_blank">MLWBD</a></div>
                         <div><a class="button" href="https://mlsbd.co/" target="_blank">MLSBD</a></div>
@@ -1207,6 +1213,37 @@
         <!-- ============================================================================================================ -->
         </div>
 
+
+
+
+
+
+<script>
+function openMovieBox() {
+    const links = [
+        "https://moviebox.ph/",
+        "https://moviebox.id/",
+        "https://moviebox.pk/",
+        "https://movieboxapp.in/"
+    ];
+
+    let i = 0;
+    const openNext = () => {
+        if (i >= links.length) {
+            alert("দুঃখিত! এই মুহূর্তে কোনো লিংক কাজ করছে না।");
+            return;
+        }
+        const w = window.open(links[i], "_blank");
+        if (!w) i++, openNext();
+    };
+    openNext();
+}
+</script>
+
+
+
+
+	
     <!-- Include the script.js file -->
     <script src="script.js"></script>
     <script src="Scroll-up/script.js"></script>
@@ -1214,6 +1251,7 @@
 
 </body>
 </html>
+
 
 
 
